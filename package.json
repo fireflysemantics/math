@@ -1,12 +1,23 @@
 {
-  "name": "math",
+  "name": "@fireflysemantics/math",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "bootstrap": "npm run i && npm run ig && npm i && cd projects/math && npm-install-peers && npm i",
+    "ig": "npm i -g @jsdevtools/version-bump-prompt gh-pages npm-check-updates npm-install-peers http-server",
+    "i": "npm i -D typedoc",
+    "c": "ng build math",
+    "u": "cd projects/math && ncu -u && npm i && npm-install-peers",
+    "bp": "cd projects/math && bump patch",
+    "p": "npm run cp && npm run bp && npm run c && cd dist/math/ && npm publish",
+    "cp": "cp ./README.md projects/math/",
+    "d": "rm -fr docs && typedoc --out docs --exclude **/*.spec.ts ./projects/math/src/lib",
+    "sd": "http-server docs",
+    "deploydocs": "./typedoc-deploy.sh"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +34,7 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^16.0.6",
     "@angular/cli": "~16.0.4",
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
@@ -32,6 +44,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^16.0.0",
+    "typedoc": "^0.24.8",
     "typescript": "~5.0.2"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "@fireflysemantics/math",
+  "version": "1.0.2",
+  "peerDependencies": {},
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "author": "Ole Ersoy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fireflysemantics/math/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fireflysemantics/math.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Typescript",
+    "Math",
+    "Distributions",
+    "Probability"
+  ],
+  "sideEffects": false
+}
