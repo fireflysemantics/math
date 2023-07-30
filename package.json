@@ -9,7 +9,7 @@
     "test": "ng test --watch=false --browsers=ChromeHeadless",
     "bootstrap": "npm run i && npm run ig && npm i && cd projects/math && npm-install-peers && npm i",
     "ig": "npm i -g @jsdevtools/version-bump-prompt gh-pages npm-check-updates npm-install-peers http-server",
-    "i": "npm i -D typedoc",
+    "i": "npm i -D typedoc gh-pages",
     "c": "ng build math",
     "u": "cd projects/math && ncu -u && npm i && npm-install-peers",
     "bp": "cd projects/math && bump patch",
@@ -17,7 +17,7 @@
     "cp": "cp ./README.md projects/math/",
     "d": "rm -fr docs && typedoc --out docs --exclude **/*.spec.ts ./projects/math/src/lib",
     "sd": "http-server docs",
-    "deploydocs": "./typedoc-deploy.sh"
+    "dd": "node ./typedoc-deploy.js"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +38,7 @@
     "@angular/cli": "~16.0.4",
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
+    "gh-pages": "^5.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

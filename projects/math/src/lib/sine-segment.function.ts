@@ -19,7 +19,7 @@ export function sineSegment(
     const increment = Math.abs(endAngle - startAngle) / increments;
     const result: number[] = [];
     let angle = startAngle;
-    for (let i = 0; i < increments; i++) {
+    for (let i = 0; i <= increments; i++) {
       let height = Math.round(baseHeight + multiplier * Math.sin(angle));
       result.push(height);
       angle += increment;

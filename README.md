@@ -2,7 +2,7 @@
 
 # @fireflysemantics/math
 
-Typescript collections library.
+Typescript math library.
 
 ## Usage
 
